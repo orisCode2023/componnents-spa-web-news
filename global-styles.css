@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: skyblue;
+}
+
+.container {
+    background-color: beige;
+    max-width: 1400px;
+    height: 80%;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    justify-content: flex-start;
+}
+
+.navbar .nav-btn {
+    border: none;
+    justify-content: end;
+    margin: 10px;
+    background: none;
+}
+
+
+.navbar .nav-btn a {
+    color: black;
+    text-decoration: none;
+}
