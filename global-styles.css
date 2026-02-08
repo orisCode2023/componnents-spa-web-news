@@ -10,9 +10,9 @@ body {
 
 .container {
     background-color: beige;
-    max-width: 1400px;
-    height: 80%;
-    margin: auto;
+    max-width: 1200px;
+    margin: 20px;
+    padding: 40px;
 }
 
 .navbar {

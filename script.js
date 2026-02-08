@@ -24,19 +24,20 @@ function addElementWithTextContent(tag, text) {
 function addNavBar() {
     const nav = addElementWithClass('nav', 'navbar')
     const headLine = addElementWithTextContent('h1', 'News')
+    const btnDivNav = createHtmlElement('div')
     const homePageBtn = addElementWithClass('button', 'nav-btn')
     const createStoryBtn = addElementWithClass('button', 'nav-btn')
     const homePageA = addElementWithTextContent('a', 'Home Page')
     const createStoryA = addElementWithTextContent('a', 'Create Story')
     homePageA.href = '/index.js'
     createStoryA.href = '/index.js'
+    btnDivNav.append(homePageBtn, createStoryBtn)
     homePageBtn.append(homePageA),
     createStoryBtn.append(createStoryA),
     container.append(nav)
     nav.append(
         headLine,
-        homePageBtn,
-        createStoryBtn
+        btnDivNav
     )
 }
 
