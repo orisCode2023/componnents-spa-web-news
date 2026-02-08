@@ -41,8 +41,15 @@ function addNavBar() {
     )
 }
 
+function addingMain(){
+    const main = createHtmlElement('main')
+    const topStories = addElementWithTextContent('h2', 'Top Stories')
+    main.append(topStories)
+    container.append(main)
+}
 
 function main(){
     addNavBar()
+    addingMain()
 }
 main()
