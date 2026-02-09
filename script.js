@@ -21,6 +21,12 @@ function addElementWithTextContent(tag, text) {
     return tag
 }
 
+function addElementWithTextContentAndClass(tag, classNamm, text) {
+    tag = addElementWithClass(tag, classNamm)
+    tag.textContent = text
+    return tag
+}
+
 function addNavBar() {
     const nav = addElementWithClass('nav', 'navbar')
     const headLine = addElementWithTextContent('h1', 'News')
@@ -46,10 +52,25 @@ function addingMain(){
     const topStories = addElementWithTextContent('h2', 'Top Stories')
     main.append(topStories)
     container.append(main)
+    return main
 }
 
+function createNewsCard(authorName, headline, articalContent){
+    const cardDiv = addElementWithClass('div', 'cards')
+    const author = addElementWithTextContentAndClass('p', 'reporter-name', authorName)
+    const title = addElementWithTextContentAndClass('h4', 'news-title', headline)
+    const artical = addElementWithTextContentAndClass('p', 'reporter-name', articalContent)
+    const main = addingMain()
+    main.append(cardDiv)
+    cardDiv.append(
+        author,
+        title, 
+        artical
+    )
+    
+}
 function main(){
     addNavBar()
-    addingMain()
+    createNewsCard("tarantino", "once upon a time in holliwood", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nobis.")
 }
 main()

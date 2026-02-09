@@ -20,6 +20,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    display: fixed;
 }
 
 .navbar h1 {
@@ -41,4 +42,8 @@ body {
 
 h2 {
     margin-top: 40px;     
+}
+
+.cards{
+    display: grid;
 }
